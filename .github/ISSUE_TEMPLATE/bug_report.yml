@@ -1,0 +1,11 @@
+name: Bug report
+description: Report a problem with the togo webhooks plugin
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes: { label: What happened?, description: Description + steps to reproduce (event, subscription). }
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes: { label: webhooks / togo version }
