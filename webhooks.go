@@ -85,7 +85,7 @@ type Service struct {
 }
 
 func init() {
-	togo.RegisterProviderFunc("webhooks", togo.PriorityService, func(k *togo.Kernel) error {
+	togo.RegisterProviderFunc("webhooks", togo.PriorityLate+10, func(k *togo.Kernel) error {
 		s := &Service{
 			k:      k,
 			subs:   map[string]*Subscription{},
